@@ -231,7 +231,7 @@ pending: {2}'.format(
                not self.state == self.STATE_PROCESSING_THUMBNAIL:
                 # Find the fakesink sink pad and attach the on_buffer_probe
                 # handler to it.
-                seek_amount = self.position_callback(self.duration, gst)
+                seek_amount = int(self.position_callback(self.duration, gst))
 
                 seek_result = self.thumbnail_pipeline.seek(
                         1.0,
