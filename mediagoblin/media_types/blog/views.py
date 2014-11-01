@@ -138,7 +138,7 @@ def blogpost_create(request):
             return render_404(request)
 
         blogpost = request.db.MediaEntry()
-        blogpost.media_type = 'mediagoblin.media_types.blogpost'
+        blogpost.media_type = 'mediagoblin.media_types.blog'
         blogpost.title = six.text_type(form.title.data)
         blogpost.description = six.text_type(cleaned_markdown_conversion((form.description.data)))
         blogpost.tags =  convert_to_tag_list_of_dicts(form.tags.data)

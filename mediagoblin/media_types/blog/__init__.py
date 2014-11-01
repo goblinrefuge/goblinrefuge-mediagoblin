@@ -24,7 +24,7 @@ from mediagoblin.media_types.blog.models import Blog, BlogPostData
 from mediagoblin.tools import pluginapi
 
 PLUGIN_DIR = os.path.dirname(__file__)
-MEDIA_TYPE = 'mediagoblin.media_types.blogpost'
+MEDIA_TYPE = 'mediagoblin.media_types.blog'
 
 
 def setup_plugin():
