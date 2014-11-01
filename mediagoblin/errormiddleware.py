@@ -35,14 +35,8 @@ MGOBLIN_ERROR_MESSAGE = """\
 |     ,,,-'     '-,,,     |
 '-------------------------'
   </pre>
-  <p>Something bad happened, and things broke.</p>
-  <p>If this is not your website, you may want to alert the owner.</p>
-  <br><br>
-  <p>
-    Powered... er broken... by
-    <a href="http://www.mediagoblin.org">MediaGoblin</a>,
-    a <a href="http://www.gnu.org">GNU Project</a>.
-  </p>
+  <p>Sorry, our goblins had a little too much to drink.</p>
+  <p>You may want to <a href="mailto:goblinpolice@goblinrefuge.com?Subject=Goblin%20Error" target="_top">alert the Goblin Police</a> and let them know what happened.</p>
 </div>"""
 
 
