@@ -210,7 +210,10 @@ class MediaEntryMixin(GenerateSlugMixin):
             # MEDIA_MANAGER for the fallback icon and return static URL
             # Raises FileTypeNotSupported in case no such manager is enabled
             manager = self.media_manager
-            thumb_url = mg_globals.app.staticdirector(manager[u'default_thumb'])
+            if manager == 0:
+                thumb_url = 'default_thumb'
+            else:
+                thumb_url = mg_globals.app.staticdirector(manager[u'default_thumb'])
         return thumb_url
 
     @property
@@ -233,6 +236,9 @@ class MediaEntryMixin(GenerateSlugMixin):
         manager = hook_handle(('media_manager', self.media_type))
         if manager:
             return manager(self)
+
+        else:
+            return 0;
 
         # Not found?  Then raise an error
         raise FileTypeNotSupported(
