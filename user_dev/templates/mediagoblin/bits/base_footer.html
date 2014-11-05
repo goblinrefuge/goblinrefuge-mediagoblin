@@ -1,0 +1,40 @@
+{#
+# GNU MediaGoblin -- federated, autonomous media hosting
+# Copyright (C) 2011-2013 MediaGoblin contributors.  See AUTHORS.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#}
+
+{%- block mediagoblin_footer %}
+  <footer>
+    {% trans -%}
+      <p>2014 SalmonLabs LLC. Follow Goblin Refuge on twitter! <a href="https://twitter.com/GoblinRefuge">@GoblinRefuge</a></p>
+    {%- endtrans %}
+    {% trans -%}
+      Powered by <a href="http://mediagoblin.org/" title='Version {{ version }}'>MediaGoblin</a>.
+    {%- endtrans %}
+    
+    {% trans source_link=app_config['source_link'] -%}
+      <a href="{{ source_link }}">Source code</a> available.
+    {%- endtrans %}
+    
+    {% if app_config['show_tos'] %}
+      <p class="fine_print">
+        <a href="{{ request.urlgen('terms_of_service') }}">
+          {%- trans %}Terms of Service{%- endtrans %}
+        </a>
+      </p>
+    {% endif %}
+  </footer>
+{%- endblock mediagoblin_footer -%}

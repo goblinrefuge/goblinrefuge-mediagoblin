@@ -1,0 +1,58 @@
+{#
+# GNU MediaGoblin -- federated, autonomous media hosting
+# Copyright (C) 2011, 2012 MediaGoblin contributors.  See AUTHORS.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#}
+
+{% if request.user %}
+    <h1>{% trans %}Explore{% endtrans %}</h1>
+  {% else %}
+    <div class="row foot">
+      <div class="eleven columns">
+        <h1>{% trans %}Welcome to Goblin Refuge!{% endtrans %}</h1>
+        {#
+        #<p>{% trans %}This site is running <a href="http://mediagoblin.org">MediaGoblin</a>, an extraordinarily great piece of media hosting software.{% endtrans %}</p>
+        #}
+        {% if auth %}
+        <p>{% trans %}To add your own media, place comments, and more, log in with your free Goblin Refuge MediaGoblin account.{% endtrans %}
+        {% if allow_registration %}
+          {#{% trans %}Don't have one yet? Register for a free acount!{% endtrans %}#}
+          {#<a class="button_action_highlight" href=
+           #  {% if persona_auth is defined %}
+           #    "javascript:;" id="persona_login1"
+           #  {% else %}
+           #    "{{ request.urlgen('mediagoblin.auth.register') }}"
+           #  {% endif %}
+           #  {% trans %}
+           #  >Register</a>
+           #  or
+           #{%- endtrans %}
+           #}
+        {% endif %}
+        </p>
+        {% endif %}
+          {#
+          #{% trans %}
+          #  <a class="button_action" href="http://mediagoblin.readthedocs.org/">Set up MediaGoblin on your own server</a>
+          #{%- endtrans %}
+          #}
+      </div>
+      <div class="four columns offset-by-one">
+        <img class="welcomeimage" src="/mgoblin_static/images/grlogotrans.png">
+      </div>
+    </div>
+    <div class="clear"></div>
+  {% endif %}
+
