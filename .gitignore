@@ -17,7 +17,8 @@
 /docs/build
 /api-docs/build
 /api-docs/source/mediagoblin*
-/user_dev/
+/user_dev/crypto/
+/user_dev/media/
 /paste_local.ini
 /mediagoblin_local.ini
 /mediagoblin.db
