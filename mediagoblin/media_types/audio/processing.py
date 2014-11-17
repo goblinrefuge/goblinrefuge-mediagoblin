@@ -193,7 +193,8 @@ class CommonAudioProcessor(MediaProcessor):
             self.create_spectrogram()
             spectrogram = self.entry.media_files['spectrogram']
 
-        spectrogram_filepath = mgg.public_store.get_local_path(spectrogram)
+        #spectrogram_filepath = mgg.public_store.get_local_path(spectrogram)
+        spectrogram_filepath = 'mediagoblin/static/images/media_thumbs/audio.png'
 
         self.thumbnailer.thumbnail_spectrogram(
             spectrogram_filepath,
